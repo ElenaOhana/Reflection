@@ -9,5 +9,7 @@ public class Main2 {
         Test test1;
         test1 = manager.newInstance(); // Another way to create an object of a class.
         test1.foo();
+
+        
     }
 }
