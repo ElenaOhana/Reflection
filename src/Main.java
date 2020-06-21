@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println(c.getName()); // consists of the name of packet and self name.
         System.out.println(c.getSimpleName()); // Just a self name
-        System.out.println(TestInterface.class);
+        System.out.println(TestInterface.class); // interface TestInterface
         /*System.out.println(TestInterface.class.getSimpleName());
         System.out.println(Test.class);
         System.out.println(MetaClass.class);*/
