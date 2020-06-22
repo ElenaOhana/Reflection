@@ -1,8 +1,9 @@
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Main2 {
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+public class Main2 { // temporarily throw an error to the main method todo - handle errors.
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException, NoSuchFieldException {
         Class<Test> manager = Test.class;
         /*Test test;
         test = new Test();
@@ -18,5 +19,12 @@ public class Main2 {
         System.out.println(method.toString());// returns:  #public void Test.foo()
 
         method.invoke(new Test());//Object #new Test() will saved in this param of Test.
+
+        //Field field = manager.getField("field"); // non-private fields => returns #java.lang.NoSuchFieldException: field
+        Field field = manager.getDeclaredField("field"); // We have access to the private variable now.
+        field.setAccessible(true);
+        field.set(test1, 42); // If a field has private modifier and without #field.setAccessible(true);, than java.lang.IllegalAccessException is thrown.
+
+        System.out.println(test1);
     }
 }
