@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.util.Arrays;
 
-public class TestAbstract extends Test implements Cloneable, Serializable {
+public abstract class TestAbstract extends Test implements Cloneable, Serializable {
     private  static int privateStaticField;
     private int field;
     private  String name;
