@@ -18,7 +18,7 @@ public class Main2 { // temporarily throw an error to the main method todo - han
         System.out.println(method.getName()); //Returns the name of the method represented by this {@code Method} object, as a {@code String}. // #foo
         System.out.println(method.toString());// returns:  #public void Test.foo()
 
-        method.invoke(new Test());//Object #new Test() will saved in this param of Test.
+        method.invoke(new Test());//Object #new Test() will saved in #this param of Test.
 
         //Field field = manager.getField("field"); // non-private fields => returns #java.lang.NoSuchFieldException: field
         Field field = manager.getDeclaredField("field"); // We have access to the private variable now.
