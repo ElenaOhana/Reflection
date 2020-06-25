@@ -1,16 +1,16 @@
 import java.io.Serializable;
 import java.util.Arrays;
 
-public class TesrAbstract extends Test implements Cloneable, Serializable {
+public class TestAbstract extends Test implements Cloneable, Serializable {
     private  static int privateStaticField;
     private int field;
     private  String name;
     private String[] sells;
 
-    public TesrAbstract() {
+    public TestAbstract() {
     }
 
-    public TesrAbstract(int field, String name) {
+    public TestAbstract(int field, String name) {
         this.field = field;
         this.name = name;
     }
@@ -20,7 +20,7 @@ public class TesrAbstract extends Test implements Cloneable, Serializable {
     }
 
     public static void setPrivateStaticField(int privateStaticField) {
-        TesrAbstract.privateStaticField = privateStaticField;
+        TestAbstract.privateStaticField = privateStaticField;
     }
 
     public int getField() {
